@@ -39,6 +39,10 @@ p {
   margin-inline-end: 0px;
 }
 
+a {
+  text-decoration: none;
+}
+
 button {
   line-height: 24px;
   border-radius: 10px;
@@ -395,7 +399,6 @@ input {
 }
 
 .main-3 {
-  margin-bottom: 5rem;
   background: #12141d;
 }
 
@@ -439,3 +442,113 @@ input {
   }
 }
 /*MAIN*/
+
+/*FOOTER*/
+.footer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  background: #111319;
+  border-top: 2px solid #ecf6fe;
+  padding: 3rem 0 1rem 3rem;
+  text-align: left;
+  font-family: Circular Std;
+  box-sizing: border-box;
+}
+
+.footer-sideL {
+  flex: 50%;
+}
+.logo2 {
+  width: 207px;
+  height: 32px;
+}
+
+.instagram-container {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANqSURBVHgBzVn/ddowEL4TcUNe2vdgA3cC0glKJsgI7QZhgyYTNO0CSUfIAg1ZoEkWaMj/TcUrEPIQlnon2cLkp40x+HvPRjaS/XHfSbo7EBaEHKg21EwLANtgzA4YbABCw35poE/tHh860lcCRLf5LujCAsA8naU0DahP9yGCjieT/VU9OnVhUjtsNm0726gsnSyxzekXskxndtf0tIFToeESArJOHfpNxL7tb6j/SIWgRaiFbguEPXpVmHrtSV6iz5O7m+zLoZJypIw7psdW3rzPGU52boeTk9RzruV4+gmKQN6pr/6BQ3UmxyaEgpDjcThHlN4BecGS0sCzmJikX9+BJYOfSc9PlLmwbpR5MA9IZCBpoCSwNeVoch1b8izbIC8r+0hxSV993zzJl+X+M5x89rKugFwCVimR+/bu/ml3IkazX1KCz72G2CeNJfqUP85m1vQY1gQ/MR9K7awXT/sVSvsQzh9jHrEVBZ90UDtwXfCkubWE1X1BNLe2aHcyP7it36TcLOV7pS0pWcG7VOKLD25Mr6Ei8AYjbrTX6zbf1EafQkWgNVguGqMdQWjxRRCIbCv5CmAMRUgERGwLCqFCvoiUvoGKoBZEXf5EqLUEnUN7VwU9qAru633XMA1kZ+RmczvIFV2XjYSXgIqDCbowPU88VjJSXPpE0Di961AZghBQPuPQI4Jop3Sk8ucZZSGiZIs/DegboU10zhcoYO3bXAJEt3kYyhiFMDVrQYFiDyoAQ6u0EGC5cMJvb/rkZbB+mePo2scGLtzS+pv9VmCxPLUg2Hoa4uIAwmzrtWnmLFAMYU14KnC2FqQSRJ8iCGfFzfWE/NZ6SeCMePwocI6t+HJmVSI5W2Jxvvf72bRjLrNaUXRtycnx+6T+8++1es3tQB35xL1kf/TkfMqRsU7j078SSTpykw+e3Ej9yjw49seLRO5l+iQTowPJ5zq+rDdUP21NMS9mcsd1wQLW9MRYUq+Q0pllfQ7S1mu8DI5ojgnEpCyxgdqdqwsO1d8sJZZsJWDK+HVUOxCY3mmwx5mg0LRfCt3jlIHXU9vf1rIpfFNqVwtopUrAxrGmNXd74zApGRcm+JgofJyvOb+IhFSfju/wduMoC7GFCKbBgQXn1DZtdZlhmPobQlKbSVwKNOc6wqtF/4b4DwPIQFwlSUQIAAAAAElFTkSuQmCC);
+  background-position: 50%;
+  margin-top: 2rem;
+  margin-left: 4rem;
+}
+
+.insta-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  margin: auto;
+}
+
+.usa-greetings {
+  font-size: 0.85rem;
+  margin-top: 2rem;
+}
+
+.japan-greetings {
+  font-size: 0.85rem;
+  margin-top: 10px;
+}
+
+.brazil-greetings {
+  font-size: 0.85rem;
+  margin-top: 10px;
+}
+
+.footer-copyright {
+  font-size: 0.75rem;
+  margin-top: 3rem;
+  color: #8094ad;
+}
+
+.footer-sideR {
+  flex: 50%;
+}
+
+.sideR-right-top {
+  font-size: 0.75rem;
+  line-height: 30px;
+  width: 15%;
+  position: absolute;
+  right: 0;
+}
+.sideR-right-middle {
+  position: absolute;
+  bottom: 4rem;
+  right: 2.5rem;
+  font-size: 0.75rem;
+}
+.sideR-right-foot {
+  position: absolute;
+  bottom: 1rem;
+  right: 3rem;
+  font-size: 0.75rem;
+  color: #8094ad;
+}
+
+.sideR-company {
+  text-transform: uppercase;
+  margin: 1rem 0 2rem 0;
+  color: #ffffff;
+}
+
+.sideR-company a {
+  color: #ffffff;
+}
+
+.about a {
+  color: #ffffff;
+}
+
+.vacant-job a {
+  color: #ffffff;
+}
+
+.sideR-right-middle a {
+  color: #ffffff;
+}
+/*FOOTER*/
