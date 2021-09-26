@@ -52,6 +52,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 .main-container {
   position: relative;
   width: 100vw;
@@ -63,6 +67,7 @@ a {
   height: 100%;
   width: 100vw;
   overflow: hidden;
+  display: flex;
 }
 
 .login-container {
@@ -76,10 +81,10 @@ a {
 }
 
 .ad-container {
-  display: flex;
-  height: 100%;
-  width: 100vw;
+  width: 50%;
   overflow: hidden;
+  background-image: url(https://app.ingate.com.br/img/lines.6d47aec6.png);
+  background-position: 40%;
 }
 
 .logo {
@@ -333,4 +338,58 @@ a {
   font-size: 16px;
   color: rgb(129, 147, 171);
   margin-left: 2rem;
+}
+
+.ad-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 0;
+  height: 100%;
+}
+
+.ad-content div {
+  position: relative;
+}
+
+.ad-content div div {
+  position: absolute;
+}
+
+.ad-icon {
+  position: absolute;
+  z-index: 1;
+  top: 60px;
+  right: 15px;
+  width: 136px;
+}
+
+.ad-youtube-video {
+  position: absolute;
+  top: 108px;
+  left: 55px;
+}
+
+.ad-youtube-video iframe {
+  width: 398px;
+  height: 227px;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-radius: 5px;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
+}
+
+@media only screen and (max-width: 600px) {
+  .login-container {
+    position: absolute;
+    width: 100%;
+  }
+  .ad-content {
+    margin-left: 3300px;
+  }
 }
