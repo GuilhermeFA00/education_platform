@@ -51,6 +51,10 @@ button {
   cursor: pointer;
 }
 
+small {
+  color: red;
+}
+
 .main-container {
   position: relative;
   width: 100vw;
@@ -76,6 +80,11 @@ button {
   font-family: Circular Std;
   margin-top: 2rem;
   color: hsla(0, 0%, 100%, 0.6);
+}
+
+.show-error {
+  font-size: 30px;
+  color: red;
 }
 
 .form-input-name {
