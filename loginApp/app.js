@@ -156,7 +156,109 @@ function signup_form() {
         let formValid = nameValid && usernameValid && emailValid && passwordValid && confirmPassword_Valid && checkboxValid;
 
         if (formValid) {
-            window.location.href = "http://127.0.0.1:5500/loginApp/login.html";
+            let listUser = JSON.parse(localStorage.getItem('listUser') || '[]');
+
+            listUser.push(
+                {
+                    nameUser: formName.value,
+                    userName: formUser.value,
+                    emailUser: formEmail.value,
+                    passWord: formPassword.value,
+                    confirmPass: formConfirmpass.value
+                }
+            )
+
+            localStorage.setItem('listUser', JSON.stringify(listUser))
+
+            setTimeout(() => {
+                window.location.href = "http://127.0.0.1:5500/loginApp/login.html";
+            }, 3000);
         }
     });
 }
+
+/*
+function signin_form() {
+    const form = document.querySelector('.login-box');
+    const formEmail = document.querySelector('.email-input');
+    const formPassword = document.querySelector('.password-input');
+
+    const isNot_filled = (value) => value === '' ? false : true;
+
+    let listUser = [];
+    let userValid = {
+        email = '',
+        pw = ''
+    }
+
+    listUser = JSON.parse(localStorage.getItem('listUser'));
+
+    function showErrorEmail(msg) {
+        const errorMsg = document.querySelector('small-gmail');
+        errorMsg.textContent = msg;
+    }
+    function showErrorPw(msg) {
+        const errorMsg = document.querySelector('small-pw');
+        errorMsg.textContent = msg;
+    }
+
+    function errorDisableEmail() {
+        const errorMsg = document.querySelector('small-gmail');
+        errorMsg.textContent = '';
+    }
+    function errorDisablePw() {
+        const errorMsg = document.querySelector('small-pw');
+        errorMsg.textContent = '';
+    }
+
+    function checkEmail() {
+        let valid = false;
+        const email = formEmail.value.trim();
+
+        if (!isNot_filled(email)) {
+            showErrorEmail("Digite seu endereço e-mail");
+        } else {
+            errorDisableEmail();
+            valid = true;
+        }
+        return valid;
+    }
+
+    function checkPassword() {
+        let valid = false;
+        const password = formPassword.value.trim();
+
+        if (!isNot_filled(password)) {
+            showErrorPw("Digite sua senha");
+        } else {
+            errorDisablePw();
+            valid = true;
+        }
+        return valid;
+    }
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        let emailValid = checkEmail();
+        let passwordValid = checkPassword();
+
+        let formValid = emailValid && passwordValid;
+
+        listUser.forEach((item) => {
+            if (formEmail.value == item.emailUser && formPassword.value == item.passWord) {
+                userValid = {
+                    email = item.gmailUser,
+                    pw = item.passWord
+                }
+            }
+
+        });
+
+        if (formEmail == userValid.email && formPassword == userValid.pw && formValid) {
+            alert("logado");
+        } else {
+            alert("error")
+        }
+    })
+}*/
