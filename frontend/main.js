@@ -1,10 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
-    main_function();
-});
-
-function main_function() {
     redirecting_pgLogin();
-}
+});
 
 //redirecting to login page
 function redirecting_pgLogin() {
