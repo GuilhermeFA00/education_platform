@@ -1,6 +1,6 @@
 singnin_form();
 function singnin_form() {
-    const form = document.querySelector('.login-form');
+    const form = document.querySelector('.login-button input');
     const formEmail = document.querySelector('.email-input');
     const formPassword = document.querySelector('.password-input');
 
@@ -46,7 +46,7 @@ function singnin_form() {
         return valid;
     }
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('click', (e) => {
         e.preventDefault();
 
         let emailValid = checkEmail();
@@ -55,7 +55,42 @@ function singnin_form() {
         let formValid = emailValid && passwordValid;
 
         if (formValid) {
-            window.location.href = 'http://127.0.0.1:5500/loginApp/register.html';
+            let listUser = []
+
+            let userValid = {
+                email: '',
+                pw: ''
+            }
+
+            listUser = JSON.parse(localStorage.getItem('listUser'));
+
+            listUser.forEach((item) => {
+                if (formEmail.value == item.emailUser && formPassword.value == item.passWord) {
+
+                    userValid = {
+                        email: item.emailUser,
+                        pw: item.passWord
+                    }
+
+                }
+            });
+
+            if (formEmail.value == userValid.email && formPassword.value == userValid.pw) {
+                window.location.href = 'http://127.0.0.1:5500/contentPage/index.html'
+
+                let mathRandom = Math.random().toString(16).substr(2)
+                let token = mathRandom + mathRandom
+
+                localStorage.setItem('token', token)
+                localStorage.setItem('userEnter', JSON.stringify(userValid))
+            } else {
+                let errorAlert = document.querySelector('.login-subtitle');
+                let updateHTML = `
+                <h3>Email ou senha inválidos</h3>
+                `;
+
+                errorAlert.innerHTML = updateHTML;
+            }
         }
-    })
+    });
 }

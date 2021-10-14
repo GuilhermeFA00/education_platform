@@ -55,12 +55,30 @@ function signup_form() {
             max = 15;
         const username = formUser.value.trim();
 
+        let listUser = []
+
+        let userValid = {
+            user: ''
+        }
+
+        listUser = JSON.parse(localStorage.getItem('listUser'));
+
+        listUser.forEach((item) => {
+            if (formUser.value == item.userName) {
+
+                userValid = {
+                    user: item.userName
+                }
+            }
+        });
+
         if (!isNot_filled(username)) {
             showError(formUser, "Digite seu nome de usuário");
         } else if (!isBetween(username.length, min, max)) {
             showError(formUser, `Sua entrada deve ter no mínimo ${min} caracteres e no máximo ${max} caracteres`);
-        }
-        else {
+        } else if (formUser.value == userValid.user) {
+            showError(formUser, "Usuário já cadastrado");
+        } else {
             errorDisable(formUser);
             valid = true;
         }
@@ -71,11 +89,31 @@ function signup_form() {
         let valid = false;
         const email = formEmail.value.trim();
 
+        let listUser = []
+
+        let userValid = {
+            email: ''
+        }
+
+        listUser = JSON.parse(localStorage.getItem('listUser'));
+
+        listUser.forEach((item) => {
+            if (formEmail.value == item.emailUser) {
+
+                userValid = {
+                    email: item.emailUser
+                }
+            }
+        });
+
         if (!isNot_filled(email)) {
             showError(formEmail, "Digite seu endereço e-mail");
         } else if (!emailValidation(email)) {
             showError(formEmail, "Enderço inválido");
-        } else {
+        } else if (formEmail.value == userValid.email) {
+            showError(formEmail, "Email já cadastrado");
+        }
+        else {
             errorDisable(formEmail);
             valid = true;
         }
