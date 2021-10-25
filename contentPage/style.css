@@ -367,4 +367,53 @@ a {
   text-align: center;
   border-radius: 4px;
 }
+
+.chat-container {
+  height: 100%;
+}
+
+.chat-content {
+  display: flex;
+  height: 90vh;
+  margin-bottom: -50px;
+}
+
+.dm-list[data-v-7a6789e8] {
+  width: 375px;
+  height: 100%;
+  min-width: 200px;
+  border-right: 1px solid hsla(0, 0%, 84.7%, 0.1);
+}
+
+.input[data-v-d5c5d0de] {
+  background: #000;
+  border-radius: 4px;
+}
+
+.dm-recent[data-v-7a6789e8] {
+  color: hsla(0, 0%, 84.7%, 0.5);
+  overflow: auto;
+  padding: 0 20px;
+  height: 90%;
+}
+
+.mt-10 {
+  margin-top: 1rem;
+}
+
+.pl-10 {
+  padding-left: 1rem;
+}
+
+.dm-chat[data-v-7a6789e8] {
+  width: 70%;
+  height: 100%;
+}
+
+.chat-box {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
 /*page content*/
