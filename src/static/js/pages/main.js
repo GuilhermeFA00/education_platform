@@ -1,23 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+import page from "./page.js";
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingate-Educa Teacher</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&amp;display=swap" rel="stylesheet">
-    <link rel="icon" href="/favicon.ico">
-    <link rel="stylesheet" href="./style.css">
-</head>
+export default class extends page {
+    constructor(params) {
+        super(params);
+        this.setTitle('Educa-Teacher');
+    }
 
-<body>
-    <div id="app">
+    async getHtml() {
+        return `
         <div class="header">
             <header>
                 <ul class="navbar">
                     <li class="logo"><img src="https://ingate.app/img/logo.d9bfd2cf.png" alt=""></li>
-                    <li class="login"><button>Login</button></li>
+                    <li class="login"><button><a href="/login">Login</a></button></li>
                 </ul>
             </header>
 
@@ -136,9 +131,6 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <script src="./main.js"></script>
-</body>
-
-</html>
+        `
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "education_platform",
+  "version": "1.0.0",
+  "description": "The development for this application will be a faithful copy of the \"Ingate\" learning platform, created by Professor Yoannes Geisller and his team.\r Credits:\r --https://ingate.com.br/\r --https://instagram.com/ingate.educa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuilhermeFA00/education_platform.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GuilhermeFA00/education_platform/issues"
+  },
+  "homepage": "https://github.com/GuilhermeFA00/education_platform#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

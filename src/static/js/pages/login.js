@@ -1,19 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+import page from "./page.js";
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingate-Educa App</title>
-    <link rel="stylesheet" href="./login.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
-</head>
+export default class extends page {
+    constructor(params) {
+        super(params);
+        this.setTitle('Login');
+    }
 
-<body>
-    <div class="app">
-        <div class="main-container">
+    async getHtml() {
+        return `
+        <div class="main-container-login">
             <div class="login-page">
                 <div class="login-container">
                     <img class="logo" src="https://app.ingate.com.br/img/logo_black.4b6e9c30.png" alt="">
@@ -69,7 +64,7 @@
                                 <div class="create-account">
                                     <div>
                                         <span>Não tem conta?</span>
-                                        <a href="http://127.0.0.1:5500/loginApp/register.html">Cadastre-se</a>
+                                        <a href="/register">Cadastre-se</a>
                                     </div>
                                 </div>
                             </form>
@@ -87,8 +82,104 @@
             </div>
         </div>
     </div>
+        `
+    }
 
-    <script src="./main.js"></script>
-</body>
+    signin_form() {
+        const form = document.querySelector('.login-button input');
+        const formEmail = document.querySelector('.email-input');
+        const formPassword = document.querySelector('.password-input');
 
-</html>
+        const isNot_filled = (value) => value === '' ? false : true;
+
+        function showError(input, msg) {
+            const formField = input.parentElement;
+
+            const errorMsg = formField.querySelector('small');
+            errorMsg.textContent = msg;
+        }
+
+        function errorDisable(input) {
+            const formField = input.parentElement;
+
+            const errorMsg = formField.querySelector('small');
+            errorMsg.textContent = '';
+        }
+
+        function checkEmail() {
+            let valid = false;
+            const email = formEmail.value.trim();
+
+            if (!isNot_filled(email)) {
+                showError(formEmail, "Digite seu endereço e-mail");
+            } else {
+                errorDisable(formEmail);
+                valid = true;
+            }
+            return valid;
+        }
+
+        function checkPassword() {
+            let valid = false;
+            const password = formPassword.value.trim();
+
+            if (!isNot_filled(password)) {
+                showError(formPassword, "Digite sua senha");
+            } else {
+                errorDisable(formPassword);
+                valid = true;
+            }
+            return valid;
+        }
+
+        form.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            let emailValid = checkEmail();
+            let passwordValid = checkPassword();
+
+            let formValid = emailValid && passwordValid;
+
+            if (formValid) {
+                let listUser = []
+
+                let userValid = {
+                    email: '',
+                    pw: ''
+                }
+
+                listUser = JSON.parse(localStorage.getItem('listUser'));
+
+                listUser.forEach((item) => {
+                    if (formEmail.value == item.emailUser && formPassword.value == item.passWord) {
+
+                        userValid = {
+                            email: item.emailUser,
+                            pw: item.passWord
+                        }
+
+                    }
+                });
+
+                alert(userValid.pw);
+
+                if (formEmail.value == userValid.email && formPassword.value == userValid.pw) {
+                    window.location.href = '/educa'
+
+                    let mathRandom = Math.random().toString(16).substr(2)
+                    let token = mathRandom + mathRandom
+
+                    localStorage.setItem('token', token)
+                    localStorage.setItem('userEnter', JSON.stringify(userValid))
+                } else {
+                    let errorAlert = document.querySelector('.login-subtitle');
+                    let updateHTML = `
+                    <h3>Email ou senha inválidos</h3>
+                    `;
+
+                    errorAlert.innerHTML = updateHTML;
+                }
+            }
+        });
+    }
+}
