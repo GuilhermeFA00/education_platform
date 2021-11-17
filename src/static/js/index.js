@@ -54,9 +54,14 @@ const router = async () => {
         view.signup_form();
     }
     if (match.route.path == "/educa") {
+        document.body.style.background = "#1f2128";
         view.menuItems_bgChange();
+        view.notificationsAlert();
+        //view.classesCards();
     }
 }
+
+window.addEventListener('popstate', router);
 
 document.addEventListener('DOMContentLoaded', () => {
     document.body.addEventListener("click", e => {

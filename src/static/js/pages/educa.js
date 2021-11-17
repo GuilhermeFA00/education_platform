@@ -198,12 +198,107 @@ export default class extends page {
                                 </div>
                             </div>
                         </div>
+                        <div class="classes-container menu-contentIcon classes-icon-container">
+
+                        </div>
+                        <div class="explorer-container menu-contentIcon explorer-icon-container">
+                            <div height="100%">
+                                <div style="padding: 1.5rem;">
+                                    <section class="classes">
+                                        <h1>Classes</h1>
+                                        <div class="cardsContainer">
+                                            <div class="cards-list">
+                                            <div class="m-5" data-v-109be1b2="" "style="scroll-snap-align: start;>
+                                            <div class="ant-card ant-card-bordered ant-card-hoverable" ghost="" data-v-487be642="" data-v-109be1b2=""
+                                                style="width: 255px; border-radius: 4px;">
+                                                <!---->
+                                                <div class="ant-card-cover"><img src="https://ingate.app/img/frontend.3d1f65ac.png" data-v-487be642="">
+                                                    <div data-v-487be642="" style="display: flex; align-content: start;">
+                                                        <div class="ant-progress ant-progress-line ant-progress-status-normal ant-progress-default"
+                                                            data-v-487be642="">
+                                                            <div>
+                                                                <div class="ant-progress-outer">
+                                                                    <div class="ant-progress-inner">
+                                                                        <div class="ant-progress-bg"
+                                                                            style="width: 0%; height: 8px; background: rgb(36, 203, 141); border-radius: 100px;">
+                                                                        </div>
+                                                                        <!---->
+                                                                    </div>
+                                                                </div>
+                                                                <!---->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="ant-card-body">
+                                                    <div class="ant-card-meta" data-v-487be642="">
+                                                        <!---->
+                                                        <div class="ant-card-meta-detail">
+                                                            <!---->
+                                                            <div class="ant-card-meta-description">
+                                                                <div data-v-487be642="" style="padding: 24px;">
+                                                                    <div data-v-487be642="" style="color: white; font-size: 14px;">Módulo 2 Fullstack</div>
+                                                                    <div class="mt-5 cc-description" data-v-487be642="" style="height: 42px;">
+                                                                        <p>Módulo framework da 4a edição fullstack. Aqui voce já sabe um bocado, já
+                                                                            <code>pode</code> procurar algum serviço na area de desenvolvedor frontend </p>
+                                                                    </div>
+                                                                    <div class="flex align-center mt-5 mb-10" data-v-487be642="">
+                                                                        <div class="a" data-v-5d0e08a8="" data-v-487be642=""><span
+                                                                                class="ant-avatar ant-avatar-circle ant-avatar-image" data-v-5d0e08a8=""
+                                                                                style="width: 30px; height: 30px; line-height: 30px; font-size: 18px;"><img
+                                                                                    draggable="false"
+                                                                                    src="https://lh3.googleusercontent.com/a-/AOh14GjVhByjmqxKkJzdphl_CNZ_iYFWPHAKLV0BqLiQlvA=s96-c"></span>
+                                                                        </div>
+                                                                        <div class="flex column ml-3" data-v-487be642=""><span data-v-487be642=""
+                                                                                style="font-size: 10px; color: white;">Yoannes Geissler</span><span
+                                                                                data-v-487be642="" style="font-size: 8px;">Owner</span></div>
+                                                                    </div>
+                                                                    <div data-v-487be642=""
+                                                                        style="padding-top: 24px; border-top: 1px solid rgba(216, 216, 216, 0.1);"><button
+                                                                            class="ant-btn ant-btn-ghost ant-btn-lg btn" width="100%" type="button"
+                                                                            data-v-c9dd59e2="" data-v-487be642=""
+                                                                            style="border: 1px solid rgb(111, 110, 255); color: rgb(111, 110, 255); width: 100%;">
+                                                                            <!----><span>Enter</span>
+                                                                        </button></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!---->
+                                            </div>
+                                        </div>
+                                            </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="settings-container menu-contentIcon settings-icon-container">
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
         `
+    }
+
+    notificationsAlert() {
+        const icon = document.querySelector('.icon-span');
+        const closeIcon = document.querySelector('.anticon-close');
+
+        icon.addEventListener('click', () => {
+            document.querySelector('.ant-drawer').classList.add('ant-drawer-open');
+            document.body.style.overflow = "hidden";
+            document.querySelector('.ant-drawer-content-wrapper').style.removeProperty("transform");
+        });
+
+        closeIcon.addEventListener('click', () => {
+            document.querySelector('.ant-drawer').classList.remove('ant-drawer-open');
+            document.body.style.removeProperty("overflow");
+            document.querySelector('.ant-drawer-content-wrapper').style.transform = "translateX(100%)";
+        });
     }
 
     menuItems_bgChange() {
@@ -240,4 +335,89 @@ export default class extends page {
             });
         }
     }
+
+    /*classesCards() {
+        cardsEvents();
+        function cardsEvents() {
+            window.addEventListener('DOMContentLoaded', () => {
+                loadJSON();
+            });
+        }
+
+        const cardList = document.querySelector('.cards-list');
+        function loadJSON() {
+            fetch('cards.json')
+                .then(response => response.json()).then(data => {
+                    let newHtml = '';
+                    data.forEach(card => {
+                        newHtml += `
+                    <div class="m-5" data-v-109be1b2="" style="scroll-snap-align: start;">
+        <div class="ant-card ant-card-bordered ant-card-hoverable" ghost="" data-v-487be642="" data-v-109be1b2=""
+            style="width: 255px; border-radius: 4px;">
+            <!---->
+            <div class="ant-card-cover"><img src="${card.backgroundImg}" data-v-487be642="">
+                <div data-v-487be642="" style="display: flex; align-content: start;">
+                    <div class="ant-progress ant-progress-line ant-progress-status-normal ant-progress-default"
+                        data-v-487be642="">
+                        <div>
+                            <div class="ant-progress-outer">
+                                <div class="ant-progress-inner">
+                                    <div class="ant-progress-bg"
+                                        style="width: 0%; height: 8px; background: rgb(36, 203, 141); border-radius: 100px;">
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ant-card-body">
+                <div class="ant-card-meta" data-v-487be642="">
+                    <!---->
+                    <div class="ant-card-meta-detail">
+                        <!---->
+                        <div class="ant-card-meta-description">
+                            <div data-v-487be642="" style="padding: 24px;">
+                                <div data-v-487be642="" style="color: white; font-size: 14px;">${card.courseName}</div>
+                                <div class="mt-5 cc-description" data-v-487be642="" style="height: 42px;">
+                                    <p>${card.description}</p>
+                                </div>
+                                <div class="flex align-center mt-5 mb-10" data-v-487be642="">
+                                    <div class="a" data-v-5d0e08a8="" data-v-487be642=""><span
+                                            class="ant-avatar ant-avatar-circle ant-avatar-image" data-v-5d0e08a8=""
+                                            style="width: 30px; height: 30px; line-height: 30px; font-size: 18px;"><img
+                                                draggable="false"
+                                                src="${card.ownerImg}"></span>
+                                    </div>
+                                    <div class="flex column ml-3" data-v-487be642=""><span data-v-487be642=""
+                                            style="font-size: 10px; color: white;">${card.ownerName}</span><span
+                                            data-v-487be642="" style="font-size: 8px;">Owner</span></div>
+                                </div>
+                                <div data-v-487be642=""
+                                    style="padding-top: 24px; border-top: 1px solid rgba(216, 216, 216, 0.1);"><button
+                                        class="ant-btn ant-btn-ghost ant-btn-lg btn" width="100%" type="button"
+                                        data-v-c9dd59e2="" data-v-487be642=""
+                                        style="border: 1px solid rgb(111, 110, 255); color: rgb(111, 110, 255); width: 100%;">
+                                        <!----><span>Enter</span>
+                                    </button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
+        </div>
+    </div>
+                    `;
+                    })
+                    cardList.innerHTML = newHtml;
+                })
+                .catch(error => {
+                    alert(`User live server or local server`);
+                    //URL scheme must be "http" or "https" for CORS request. You need to be serving your index.html locally or have your site hosted on a live server somewhere for the Fetch API to work properly.
+                })
+        }
+    }*/
 }
