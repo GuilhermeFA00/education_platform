@@ -2,6 +2,7 @@ import main from "./pages/main.js";
 import register from "./pages/register.js";
 import login from "./pages/login.js";
 import educa from "./pages/educa.js";
+import card from "./pages/card.js";
 
 const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
 
@@ -24,7 +25,8 @@ const router = async () => {
         { path: "/", view: main },
         { path: "/login", view: login },
         { path: "/register", view: register },
-        { path: "/educa", view: educa }
+        { path: "/educa", view: educa },
+        { path: "/card", view: card }
     ]
 
     const potentialMatches = routes.map(route => {
@@ -57,7 +59,14 @@ const router = async () => {
         document.body.style.background = "#1f2128";
         view.menuItems_bgChange();
         view.notificationsAlert();
+        view.joinClass();
+        view.enterClass();
         //view.classesCards();
+    }
+    if (match.route.path == "/card") {
+        document.body.style.background = "#1f2128";
+        view.menuItems_bgChange();
+        view.notificationsAlert();
     }
 }
 

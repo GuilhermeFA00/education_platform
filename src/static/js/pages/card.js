@@ -3,7 +3,7 @@ import page from "./page.js";
 export default class extends page {
     constructor(params) {
         super(params);
-        this.setTitle('Ingate-Educa');
+        this.setTitle('Class');
     }
 
     async getHtml() {
@@ -201,83 +201,158 @@ export default class extends page {
                         <div class="classes-container menu-contentIcon classes-icon-container">
                             <div height="100%">
                                 <div style="padding: 1.5rem;">
-                                    <h1>Attending classes</h1>
-                                    <div class="classes-user">
-                                        <section class="classes">
-                                        </section>
+                                    
+                                    <div id="ch" class="cl t-grey flex column p-10" data-v-50eca5fd="">
+                                    <div class="flex align-center" data-v-50eca5fd="">
+                                        <h1 data-v-50eca5fd="">Ingate cast</h1>
+                                        <!---->
+                                        <!----><svg viewBox="0 0 24 24" class="share-icon" data-v-0340fcb4="" style="width: 24px; height: 24px;">
+                                            <path fill="rgba(255, 255, 255, 1.0)"
+                                                d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.19C16.5,7.69 17.21,8 18,8A3,3 0 0,0 21,5A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.81C7.5,9.31 6.79,9 6,9A3,3 0 0,0 3,12A3,3 0 0,0 6,15C6.79,15 7.5,14.69 8.04,14.19L15.16,18.34C15.11,18.55 15.08,18.77 15.08,19C15.08,20.61 16.39,21.91 18,21.91C19.61,21.91 20.92,20.61 20.92,19A2.92,2.92 0 0,0 18,16.08Z"
+                                                data-v-0340fcb4=""></path>
+                                        </svg>
                                     </div>
+                                    <div class="flex justify-between" data-v-50eca5fd="">
+                                        <div class="flex my-5" data-v-50eca5fd="">
+                                            <div class="c m-1 px-5 py-1 flex justify-center align-center pointer" data-v-d10fa5c4=""
+                                                data-v-50eca5fd="">
+                                                <div class="a" data-v-5d0e08a8="" data-v-d10fa5c4=""><span
+                                                        class="ant-avatar ant-avatar-circle ant-avatar-image" data-v-5d0e08a8=""
+                                                        style="width: 24px; height: 24px; line-height: 24px; font-size: 18px;"><img
+                                                            draggable="false"
+                                                            src="https://lh3.googleusercontent.com/a-/AOh14GjVhByjmqxKkJzdphl_CNZ_iYFWPHAKLV0BqLiQlvA=s96-c"></span>
+                                                </div>
+                                                <!----><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    version="1.1" width="16" height="16" viewBox="0 0 24 24" data-v-d10fa5c4="">
+                                                    <path fill="yellow"
+                                                        d="M5 16L3 5L8.5 10L12 4L15.5 10L21 5L19 16H5M19 19C19 19.6 18.6 20 18 20H6C5.4 20 5 19.6 5 19V18H19V19Z">
+                                                    </path>
+                                                </svg><span class="ml-2" data-v-d10fa5c4="" style="font-size: 0.8rem;">Yoannes Geissler</span>
+                                            </div>
+                                        </div>
+                                        <!---->
+                                    </div>
+                                    <div class="ant-tabs-line ant-tabs ant-tabs-top" data-v-50eca5fd="">
+                                        <div role="tablist" class="ant-tabs-bar ant-tabs-top-bar" tabindex="0">
+                                            <div class="ant-tabs-nav-container"><span unselectable="unselectable"
+                                                    class="ant-tabs-tab-prev ant-tabs-tab-btn-disabled"><span class="ant-tabs-tab-prev-icon"><span
+                                                            role="img" aria-label="left"
+                                                            class="anticon anticon-left ant-tabs-tab-prev-icon-target"><svg focusable="false"
+                                                                class="" data-icon="left" width="1em" height="1em" fill="currentColor"
+                                                                aria-hidden="true" viewBox="64 64 896 896">
+                                                                <path
+                                                                    d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 000 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z">
+                                                                </path>
+                                                            </svg></span></span></span><span unselectable="unselectable"
+                                                    class="ant-tabs-tab-next ant-tabs-tab-btn-disabled"><span class="ant-tabs-tab-next-icon"><span
+                                                            role="img" aria-label="right"
+                                                            class="anticon anticon-right ant-tabs-tab-next-icon-target"><svg focusable="false"
+                                                                class="" data-icon="right" width="1em" height="1em" fill="currentColor"
+                                                                aria-hidden="true" viewBox="64 64 896 896">
+                                                                <path
+                                                                    d="M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z">
+                                                                </path>
+                                                            </svg></span></span></span>
+                                                <div class="ant-tabs-nav-wrap">
+                                                    <div class="ant-tabs-nav-scroll">
+                                                        <div class="ant-tabs-nav ant-tabs-nav-animated"
+                                                            style="transform: translate3d(0px, 0px, 0px);">
+                                                            <div>
+                                                                <div role="tab" aria-disabled="false" aria-selected="true"
+                                                                    class="ant-tabs-tab-active ant-tabs-tab">Home</div>
+                                                                <div role="tab" aria-disabled="false" aria-selected="false" class="ant-tabs-tab">
+                                                                    Classroom</div>
+                                                                <div role="tab" aria-disabled="false" aria-selected="false" class="ant-tabs-tab">
+                                                                    Feed</div>
+                                                                <div role="tab" aria-disabled="false" aria-selected="false" class="ant-tabs-tab">
+                                                                    Community</div>
+                                                                <div role="tab" aria-disabled="false" aria-selected="false" class="ant-tabs-tab">
+                                                                    Audio</div>
+                                                                <div role="tab" aria-disabled="false" aria-selected="false" class="ant-tabs-tab">
+                                                                    Videos</div>
+                                                            </div>
+                                                            <div class="ant-tabs-ink-bar ant-tabs-ink-bar-animated"
+                                                                style="display: block; transform: translate3d(0px, 0px, 0px); width: 69px;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div tabindex="0" role="presentation"
+                                            style="width: 0px; height: 0px; overflow: hidden; position: absolute;"></div>
+                                        <div class="ant-tabs-top-content ant-tabs-content ant-tabs-content-animated" style="margin-left: 0%;">
+                                            <div class="ant-tabs-tabpane ant-tabs-tabpane-active" role="tabpanel" aria-hidden="false"
+                                                data-v-50eca5fd="">
+                                                <div tabindex="0" role="presentation"
+                                                    style="width: 0px; height: 0px; overflow: hidden; position: absolute;"></div>
+                                                <h2 data-v-50eca5fd="">Description</h2>
+                                                <div class="cl-desc mb-10" data-v-50eca5fd="">
+                                                    <p>video cast da Ingate sobre TI.</p>
+                                                    <p>Colocaremos video semanais sobre mercado de TI em geral no Japão e no mundo.</p>
+                                                </div>
+                                                <div class="mt-13" data-v-50eca5fd="">
+                                                    <div class="label">Schedule</div>
+                                                    <div>
+                                                        <div><strong>Frequency</strong>: <span>Weekly</span></div>
+                                                        <div>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="s-table-row"> • Fridays: </td>
+                                                                    <td class="s-table-row">21:30~22:30</td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-13" data-v-50eca5fd="">
+                                                    <h2>Free videos</h2>
+                                                    <div class="flex wrap"></div>
+                                                </div>
+                                                <div tabindex="0" role="presentation"
+                                                    style="width: 0px; height: 0px; overflow: hidden; position: absolute;"></div>
+                                            </div>
+                                            <div class="ant-tabs-tabpane ant-tabs-tabpane-inactive" role="tabpanel" aria-hidden="true"
+                                                data-v-50eca5fd="">
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                            </div>
+                                            <div class="ant-tabs-tabpane ant-tabs-tabpane-inactive" role="tabpanel" aria-hidden="true"
+                                                data-v-50eca5fd="">
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                            </div>
+                                            <div class="ant-tabs-tabpane ant-tabs-tabpane-inactive" role="tabpanel" aria-hidden="true"
+                                                data-v-50eca5fd="">
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                            </div>
+                                            <div class="ant-tabs-tabpane ant-tabs-tabpane-inactive" role="tabpanel" aria-hidden="true"
+                                                data-v-50eca5fd="">
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                            </div>
+                                            <div class="ant-tabs-tabpane ant-tabs-tabpane-inactive" role="tabpanel" aria-hidden="true"
+                                                data-v-50eca5fd="">
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                            </div>
+                                        </div>
+                                        <div tabindex="0" role="presentation"
+                                            style="width: 0px; height: 0px; overflow: hidden; position: absolute;"></div>
+                                    </div>
+                                </div>
                                 </div>
                             </div>
                         </div>
                         <div class="explorer-container menu-contentIcon explorer-icon-container">
                             <div height="100%">
                                 <div style="padding: 1.5rem;">
-                                    <h1>Classes</h1>
-                                    <section class="classes">
-                                        <div class="cardsContainer">
-                                            <div class="cards-list">
-                                            <div class="m-5" data-v-109be1b2="" "style="scroll-snap-align: start;>
-                                            <div class="ant-card ant-card-bordered ant-card-hoverable" ghost="" data-v-487be642="" data-v-109be1b2=""
-                                                style="width: 255px; border-radius: 4px;">
-                                                <!---->
-                                                <div class="ant-card-cover"><img src="https://ingate.app/img/frontend.3d1f65ac.png" class="card-img" data-v-487be642="">
-                                                    <div data-v-487be642="" style="display: flex; align-content: start;">
-                                                        <div class="ant-progress ant-progress-line ant-progress-status-normal ant-progress-default"
-                                                            data-v-487be642="">
-                                                            <div>
-                                                                <div class="ant-progress-outer">
-                                                                    <div class="ant-progress-inner">
-                                                                        <div class="ant-progress-bg"
-                                                                            style="width: 0%; height: 8px; background: rgb(36, 203, 141); border-radius: 100px;">
-                                                                        </div>
-                                                                        <!---->
-                                                                    </div>
-                                                                </div>
-                                                                <!---->
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="ant-card-body">
-                                                    <div class="ant-card-meta" data-v-487be642="">
-                                                        <!---->
-                                                        <div class="ant-card-meta-detail">
-                                                            <!---->
-                                                            <div class="ant-card-meta-description">
-                                                                <div data-v-487be642="" style="padding: 24px;">
-                                                                    <div class="module-title" data-v-487be642="" style="color: white; font-size: 14px;">Módulo 2 Fullstack</div>
-                                                                    <div class="mt-5 cc-description" data-v-487be642="" style="height: 42px;">
-                                                                        <p>Módulo framework da 4a edição fullstack. Aqui voce já sabe um bocado, já
-                                                                            <code>pode</code> procurar algum serviço na area de desenvolvedor frontend </p>
-                                                                    </div>
-                                                                    <div class="flex align-center mt-5 mb-10" data-v-487be642="">
-                                                                        <div class="a" data-v-5d0e08a8="" data-v-487be642=""><span
-                                                                                class="ant-avatar ant-avatar-circle ant-avatar-image" data-v-5d0e08a8=""
-                                                                                style="width: 30px; height: 30px; line-height: 30px; font-size: 18px;"><img class="owner-img"
-                                                                                    draggable="false"
-                                                                                    src="https://lh3.googleusercontent.com/a-/AOh14GjVhByjmqxKkJzdphl_CNZ_iYFWPHAKLV0BqLiQlvA=s96-c"></span>
-                                                                        </div>
-                                                                        <div class="flex column ml-3" data-v-487be642=""><span class="owner-name" data-v-487be642=""
-                                                                                style="font-size: 10px; color: white;">Yoannes Geissler</span><span
-                                                                                data-v-487be642="" style="font-size: 8px;">Owner</span></div>
-                                                                    </div>
-                                                                    <div data-v-487be642=""
-                                                                        style="padding-top: 24px; border-top: 1px solid rgba(216, 216, 216, 0.1);"><button
-                                                                            class="ant-btn ant-btn-ghost ant-btn-lg btn" width="100%" type="button"
-                                                                            data-v-c9dd59e2="" data-v-487be642=""
-                                                                            style="border: 1px solid rgb(111, 110, 255); color: rgb(111, 110, 255); width: 100%;">
-                                                                            <span class="enterBtn">Enter</span>
-                                                                        </button></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!---->
-                                            </div>
-                                        </div>
-                                            </div>
-                                    </section>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -314,9 +389,9 @@ export default class extends page {
         const menuItems = document.querySelectorAll('.menu-contentIcon');
 
         addEventListener('DOMContentLoaded', () => {
-            menuOptions[0].style.cssText += 'background-color:#6b69f9';
+            menuOptions[2].style.cssText += 'background-color:#6b69f9';
             menuItems[1].style.display = "none";
-            menuItems[2].style.display = "none";
+            menuItems[0].style.display = "none";
         });
 
         menuOptions.forEach((item) => {
@@ -335,6 +410,10 @@ export default class extends page {
                     item.style.display = "none";
                 }
             });
+
+            if (menuOptions[2].style.cssText != 'background-color:#6b69f9') {
+                location.href = '/educa';
+            }
         }
 
         function resetActiveItem() {
@@ -343,207 +422,4 @@ export default class extends page {
             });
         }
     }
-
-    joinClass() {
-        const enterBtn = document.querySelector('.enterBtn');
-        const classesUser = document.querySelector('.classes-user');
-
-        allEvents();
-
-        function allEvents() {
-            window.addEventListener('DOMContentLoaded', () => {
-                loadItems();
-            });
-
-            enterBtn.addEventListener('click', addClass());
-        }
-
-        function addClass() {
-            const classItem = document.createElement('div');
-            classItem.classList.add('classItem');
-
-            classItem.innerHTML = `
-            <div class="m-5" data - v - 109be1b2 = "" "style=" scroll - snap - align: start;>
-                <div class=" ant-card="" ant-card-bordered="" ant-card-hoverable" = "" ghost = "" data - v - 487be642 = ""
-                style = "width: 255px; border-radius: 4px;" >
-            <div class="ant-card-cover"><img src="https://ingate.app/img/frontend.3d1f65ac.png" data-v-487be642="">
-                <div data-v-487be642="" style="display: flex; align-content: start;">
-                    <div class="ant-progress ant-progress-line ant-progress-status-normal ant-progress-default"
-                        data-v-487be642="">
-                        <div>
-                            <div class="ant-progress-outer">
-                                <div class="ant-progress-inner">
-                                    <div class="ant-progress-bg"
-                                        style="width: 0%; height: 8px; background: rgb(36, 203, 141); border-radius: 100px;">
-                                    </div>
-                                    <!---->
-                                </div>
-                            </div>
-                            <!---->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="ant-card-body">
-                <div class="ant-card-meta" data-v-487be642="">
-                    <!---->
-                    <div class="ant-card-meta-detail">
-                        <!---->
-                        <div class="ant-card-meta-description">
-                            <div data-v-487be642="" style="padding: 24px;">
-                                <div data-v-487be642="" style="color: white; font-size: 14px;">Módulo 2 Fullstack</div>
-                                <div class="mt-5 cc-description" data-v-487be642="" style="height: 42px;">
-                                    <p>Módulo framework da 4a edição fullstack. Aqui voce já sabe um bocado, já
-                                        <code>pode</code> procurar algum serviço na area de desenvolvedor frontend
-                                    </p>
-                                </div>
-                                <div class="flex align-center mt-5 mb-10" data-v-487be642="">
-                                    <div class="a" data-v-5d0e08a8="" data-v-487be642=""><span
-                                            class="ant-avatar ant-avatar-circle ant-avatar-image" data-v-5d0e08a8=""
-                                            style="width: 30px; height: 30px; line-height: 30px; font-size: 18px;"><img
-                                                draggable="false"
-                                                src="https://lh3.googleusercontent.com/a-/AOh14GjVhByjmqxKkJzdphl_CNZ_iYFWPHAKLV0BqLiQlvA=s96-c"></span>
-                                    </div>
-                                    <div class="flex column ml-3" data-v-487be642=""><span data-v-487be642=""
-                                            style="font-size: 10px; color: white;">Yoannes Geissler</span><span
-                                            data-v-487be642="" style="font-size: 8px;">Owner</span></div>
-                                </div>
-                                <div data-v-487be642=""
-                                    style="padding-top: 24px; border-top: 1px solid rgba(216, 216, 216, 0.1);"><button
-                                        class="ant-btn ant-btn-ghost ant-btn-lg btn" width="100%" type="button"
-                                        data-v-c9dd59e2="" data-v-487be642=""
-                                        style="border: 1px solid rgb(111, 110, 255); color: rgb(111, 110, 255); width: 100%;">
-                                        <!----><span class="enterBtn">Enter</span>
-                                    </button></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!---->
-        </div >
-            `
-            classesUser.appendChild(classItem);
-        }
-
-        function getClassInfo(classProduct) {
-            let classInfo = {
-                imgSrc: classProduct.querySelector('.card-img').src,
-                moduleTitle: classProduct.querySelector('.module-title').textContent,
-                description: classProduct.querySelector('.cc-description').textContent,
-                ownerImg: classProduct.querySelector('.owner-img').src,
-                ownerName: classProduct.querySelector('.owner-name').textContent
-            }
-            addClass();
-            saveProductInStrg();
-        }
-
-        function loadItems() {
-            let products = getProductFromStrg();
-            products.forEach(product => addClass(product));
-        }
-
-        function saveProductInStrg(item) {
-            let products = getProductFromStrg();
-            products.push(item);
-            localStorage.setItem('products', JSON.stringify(products));
-        }
-
-        function getProductFromStrg() {
-            return localStorage.getItem('products') ? JSON.parse(localStorage.getItem('products')) : [];//If the key does not exist, an empty array will be added.
-        }
-    }
-
-    enterClass() {
-        const enterBtn = document.querySelector('.enterBtn');
-
-        enterBtn.addEventListener('click', () => {
-            window.location.href = '/card';
-        });
-    }
-
-    /*classesCards() {
-        cardsEvents();
-        function cardsEvents() {
-            window.addEventListener('DOMContentLoaded', () => {
-                loadJSON();
-            });
-        }
-
-        const cardList = document.querySelector('.cards-list');
-        function loadJSON() {
-            fetch('cards.json')
-                .then(response => response.json()).then(data => {
-                    let newHtml = '';
-                    data.forEach(card => {
-                        newHtml += `
-            < div class="m-5" data - v - 109be1b2 = "" style = "scroll-snap-align: start;" >
-                <div class="ant-card ant-card-bordered ant-card-hoverable" ghost="" data-v-487be642="" data-v-109be1b2=""
-                    style="width: 255px; border-radius: 4px;">
-                    <!---->
-                    <div class="ant-card-cover"><img src="${card.backgroundImg}" data-v-487be642="">
-                        <div data-v-487be642="" style="display: flex; align-content: start;">
-                        <div class ="ant-progress ant-progress-line ant-progress-status-normal ant-progress-default"
-                        data-v-487be642="">
-                        <div>
-                        <div class ="ant-progress-outer">
-                        <div class ="ant-progress-inner">
-                        <div class ="ant-progress-bg"
-                        style="width: 0%; height: 8px; background: rgb(36, 203, 141); border-radius: 100px;">
-                        </div>
-                        <!---->
-                        </div>
-                        </div>
-                        <!---->
-                        </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="ant-card-body">
-                        <div class="ant-card-meta" data-v-487be642="">
-                            <!---->
-                            <div class="ant-card-meta-detail">
-                                <!---->
-                                <div class="ant-card-meta-description">
-                                    <div data-v-487be642="" style="padding: 24px;">
-                                        <div data-v-487be642="" style="color: white; font-size: 14px;">${card.courseName}</div>
-                                        <div class="mt-5 cc-description" data-v-487be642="" style="height: 42px;">
-                                            <p>${card.description}</p>
-                                        </div>
-                                        <div class="flex align-center mt-5 mb-10" data-v-487be642="">
-                                            <div class="a" data-v-5d0e08a8="" data-v-487be642=""><span
-                                                class="ant-avatar ant-avatar-circle ant-avatar-image" data-v-5d0e08a8=""
-                                                style="width: 30px; height: 30px; line-height: 30px; font-size: 18px;"><img
-                                                    draggable="false"
-                                                    src="${card.ownerImg}"></span>
-                                            </div>
-                                            <div class="flex column ml-3" data-v-487be642=""><span data-v-487be642=""
-                                                style="font-size: 10px; color: white;">${card.ownerName}</span><span
-                                                    data-v-487be642="" style="font-size: 8px;">Owner</span></div>
-                                        </div>
-                                        <div data-v-487be642=""
-                                            style="padding-top: 24px; border-top: 1px solid rgba(216, 216, 216, 0.1);"><button
-                                                class="ant-btn ant-btn-ghost ant-btn-lg btn" width="100%" type="button"
-                                                data-v-c9dd59e2="" data-v-487be642=""
-                                                style="border: 1px solid rgb(111, 110, 255); color: rgb(111, 110, 255); width: 100%;">
-                                                <!----><span>Enter</span>
-                                            </button></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!---->
-                </div>
-    </div >
-            `;
-                    })
-                    cardList.innerHTML = newHtml;
-                })
-                .catch(error => {
-                    alert(`User live server or local server`);
-                    //URL scheme must be "http" or "https" for CORS request. You need to be serving your index.html locally or have your site hosted on a live server somewhere for the Fetch API to work properly.
-                })
-        }
-    }*/
 }
